@@ -1,0 +1,53 @@
+# Summary
+
+* [Home](/)
+* [Introduction](README.md)
+
+## Basics
+* [First Go Program](basics/first-go-program.md)
+
+## Syntax
+* [Structure](syntax/structure.md)
+* [Variables](syntax/variables.md)
+* [Control Structures](syntax/control-structures.md)
+* [Data types](syntax/data-types.md)
+* [Basic data types](syntax/basic-data-types.md)
+* [Aggregate data types](syntax/aggregate-data-types.md)
+* [Reference data types](syntax/reference-data-types.md)
+* [Functions](syntax/functions.md)
+* [OOP](syntax/OOP.md)
+* [Interfaces](syntax/interfaces.md)
+* [Concurrency](syntax/concurrency.md)
+* [Packages](syntax/packages.md)
+* [Error Handling](syntax/error-handling.md)
+* [Logging](syntax/logging.md)
+* [Testing](syntax/testing.md)
+* [Benchmark](syntax/benchmark.md)
+
+## Examples
+* [Simple Server](examples/simple-server.md)
+* [Cache Files](examples/cache-files.md)
+* [Gzip](examples/gzip.md)
+* [SLL Server](examples/ssl-server.md)
+* [Routing](examples/routing.md)
+* [Templates](examples/templates.md)
+* [Forms](examples/forms.md)
+* [Web Services](examples/examples-services.md)
+* [Middlewares](examples/middlewares.md)
+* [Context](examples/context.md)
+* [Basic Authentication](examples/basic-authentication.md)
+* [Cookies and Sessions](examples/cookies-and-sessions.md)
+* [Oauth2](examples/oauth2.md)
+* [JWT](examples/jwt.md)
+* [Flash Messages](examples/flash-messages.md)
+* [Internationalization and Localization](examples/internationalization-and-localization.md)
+* [Websockets](examples/examplessockets.md)
+* [SSE](examples/examplessockets.md)
+* [MongoDB](examples/mongodb.md)
+* [SQL](examples/sql.md)
+* [Emails](examples/sql.md)
+* [Puah notification](examples/sql.md)
+* [Security](examples/security.md)
+* [Benchmark](examples/benchmark.md)
+* [Deployment](examples/deployment.md)
+

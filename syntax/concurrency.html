@@ -1,0 +1,748 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Concurrency · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Lern about concurrency and channels in Go.">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="packages.html" />
+    
+    
+    <link rel="prev" href="interfaces.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <span>
+            
+                    
+                    Home
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Basics</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../basics/first-go-program.html">
+            
+                <a href="../basics/first-go-program.html">
+            
+                    
+                    First Go Program
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Syntax</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="structure.html">
+            
+                <a href="structure.html">
+            
+                    
+                    Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="variables.html">
+            
+                <a href="variables.html">
+            
+                    
+                    Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="control-structures.html">
+            
+                <a href="control-structures.html">
+            
+                    
+                    Control Structures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="data-types.html">
+            
+                <a href="data-types.html">
+            
+                    
+                    Data types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="basic-data-types.html">
+            
+                <a href="basic-data-types.html">
+            
+                    
+                    Basic data types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="aggregate-data-types.html">
+            
+                <a href="aggregate-data-types.html">
+            
+                    
+                    Aggregate data types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="reference-data-types.html">
+            
+                <a href="reference-data-types.html">
+            
+                    
+                    Reference data types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="functions.html">
+            
+                <a href="functions.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="OOP.html">
+            
+                <a href="OOP.html">
+            
+                    
+                    OOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="interfaces.html">
+            
+                <a href="interfaces.html">
+            
+                    
+                    Interfaces
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.11" data-path="concurrency.html">
+            
+                <a href="concurrency.html">
+            
+                    
+                    Concurrency
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.12" data-path="packages.html">
+            
+                <a href="packages.html">
+            
+                    
+                    Packages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.13" data-path="error-handling.html">
+            
+                <a href="error-handling.html">
+            
+                    
+                    Error Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.14" data-path="logging.html">
+            
+                <a href="logging.html">
+            
+                    
+                    Logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.15" data-path="testing.html">
+            
+                <a href="testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.16" data-path="benchmark.html">
+            
+                <a href="benchmark.html">
+            
+                    
+                    Benchmark
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Concurrency</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="goroutine">Goroutine</h1>
+<blockquote>
+<p>Concurrency is about dealing with lots of things at once. Parallelism is about doing lots of things at once.</p>
+</blockquote>
+<p>In Go each concurrently executed activity is called <code>goroutine</code>.
+A <code>goroutine</code> is created using <code>go</code> keyword in front of a function.
+The <code>go</code> keyword allows to launch a function that executes independently from it&apos;s calling function.
+<code>go</code> keyword can be used on an existing function, an independent function or an expression that calls a function.</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;sync&quot;</span>
+)
+
+<span class="hljs-keyword">var</span> wg sync.WaitGroup
+
+<span class="hljs-keyword">func</span> f(n <span class="hljs-keyword">int</span>) {
+    <span class="hljs-keyword">defer</span> wg.Done()
+    <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt;= <span class="hljs-number">3</span>; i++ {
+        fmt.Println(n, <span class="hljs-string">&quot;:&quot;</span>, i)
+    }
+}
+<span class="hljs-keyword">func</span> main() {
+    wg.Add(<span class="hljs-number">3</span>)
+    <span class="hljs-keyword">go</span> f(<span class="hljs-number">0</span>)
+    <span class="hljs-keyword">go</span> f(<span class="hljs-number">1</span>)
+    <span class="hljs-keyword">go</span> f(<span class="hljs-number">2</span>)
+    wg.Wait()
+}
+</code></pre>
+<p>output is:</p>
+<pre><code class="lang-go"><span class="hljs-number">1</span> : <span class="hljs-number">0</span>
+<span class="hljs-number">1</span> : <span class="hljs-number">1</span>
+<span class="hljs-number">1</span> : <span class="hljs-number">2</span>
+<span class="hljs-number">1</span> : <span class="hljs-number">3</span>
+<span class="hljs-number">2</span> : <span class="hljs-number">0</span>
+<span class="hljs-number">2</span> : <span class="hljs-number">1</span>
+<span class="hljs-number">0</span> : <span class="hljs-number">0</span>
+<span class="hljs-number">0</span> : <span class="hljs-number">1</span>
+<span class="hljs-number">0</span> : <span class="hljs-number">2</span>
+<span class="hljs-number">0</span> : <span class="hljs-number">3</span>
+<span class="hljs-number">2</span> : <span class="hljs-number">2</span>
+<span class="hljs-number">2</span> : <span class="hljs-number">3</span>
+</code></pre>
+<p>As the output shows the <code>f</code> functions are executed concurrently.
+<code>wg</code> is used to wait for all the concurrently function to complete. Without <code>wg</code> the <code>main()</code> will terminate before the concurrent function can finish.</p>
+<h2 id="clojures-and-goroutines">Clojures and Goroutines</h2>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;sync&quot;</span>
+)
+
+<span class="hljs-keyword">var</span> wg sync.WaitGroup
+
+<span class="hljs-keyword">func</span> count(start, stop, delta <span class="hljs-keyword">int</span>) {
+    <span class="hljs-keyword">for</span> i := start; i &lt;= stop; i += delta {
+        fmt.Println(i)
+    }
+}
+
+<span class="hljs-keyword">func</span> main() {
+    starts := []<span class="hljs-keyword">int</span>{<span class="hljs-number">10</span>, <span class="hljs-number">40</span>, <span class="hljs-number">70</span>, <span class="hljs-number">100</span>}
+
+    wg.Add(<span class="hljs-built_in">len</span>(starts))
+
+    <span class="hljs-keyword">for</span> _, j := <span class="hljs-keyword">range</span> starts {
+        <span class="hljs-keyword">go</span> <span class="hljs-keyword">func</span>(s <span class="hljs-keyword">int</span>) { 
+            count(s, s+<span class="hljs-number">20</span>, <span class="hljs-number">10</span>)
+            wg.Done()
+        }(j) <span class="hljs-comment">// pass copy of variable to the function</span>
+    }
+    wg.Wait()
+}
+</code></pre>
+<p>In the example above since <code>j</code> is updated with each iteration it will be impossible to determine what value will be read by the cloujure.
+In most cases the goroutine will see the last value. We can easily avoid this by passing the variable as a parameter in the function literal for the goroutine.</p>
+<h1 id="channels">Channels</h1>
+<p>Channels are a mechanism of communication between two goroutines. Go uses the <code>&lt;-</code> operator to indicate movement of data.
+<code>&lt;- var</code> is used to send data and <code>var &lt;-</code> is used to receive data. Like for the other reference data type the channel is created with <code>make()</code> function.</p>
+<p>There are two type of channels: buffered and unbuffered channels.</p>
+<h2 id="unbuffered-channels">unbuffered channels</h2>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+)
+
+<span class="hljs-keyword">var</span> repetitions = <span class="hljs-number">3</span>
+
+<span class="hljs-keyword">var</span> c <span class="hljs-keyword">chan</span> <span class="hljs-keyword">string</span>
+
+<span class="hljs-keyword">func</span> init() {
+    c = <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> <span class="hljs-keyword">string</span>)
+}
+
+<span class="hljs-keyword">func</span> f(n <span class="hljs-keyword">int</span>) {
+    <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt;= repetitions; i++ {
+        fmt.Println(n, <span class="hljs-string">&quot;:&quot;</span>, i)
+    }
+    c &lt;- fmt.Sprintf(<span class="hljs-string">&quot;done %d\n&quot;</span>, n)
+}
+<span class="hljs-keyword">func</span> main() {
+    <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; repetitions; i++ {
+        <span class="hljs-keyword">go</span> f(i)
+    }
+
+    <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; repetitions; i++ {
+        fmt.Println(&lt;-c)
+    }
+}
+</code></pre>
+<p>In the code above three goroutines are launched and communicates with the <code>main()</code> goroutine using unbuffered  chanel <code>c</code>.
+The channel is unbuffered because has no length and at every <code>c &lt;- fmt.Sprintf(&quot;done %d\n&quot;, n)</code> send the program will block until
+<code>fmt.Println(&lt;-c)</code> is executed. </p>
+<p>Characteristics:</p>
+<ul>
+<li>If the channel is empty, the receiver blocks until there is data</li>
+<li>The sender can send only to an empty channel and blocks until the next receive operation</li>
+<li>When the channel has data, the receiver can proceed to receive the data.</li>
+</ul>
+<h2 id="buffered-channels">buffered channels</h2>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;sync/atomic&quot;</span>
+)
+
+<span class="hljs-keyword">var</span> repetitions <span class="hljs-keyword">int64</span> = <span class="hljs-number">100</span>
+
+<span class="hljs-keyword">var</span> counter <span class="hljs-keyword">int64</span>
+
+<span class="hljs-keyword">var</span> c <span class="hljs-keyword">chan</span> <span class="hljs-keyword">string</span>
+
+<span class="hljs-keyword">func</span> init() {
+    c = <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> <span class="hljs-keyword">string</span>, repetitions)
+}
+
+<span class="hljs-keyword">func</span> f(n <span class="hljs-keyword">int</span>) {
+    <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt;= <span class="hljs-keyword">int</span>(repetitions); i++ {
+        fmt.Println(n, <span class="hljs-string">&quot;:&quot;</span>, i)
+    }
+    c &lt;- fmt.Sprintf(<span class="hljs-string">&quot;done %d\n&quot;</span>, n)
+    atomic.AddInt64(&amp;counter, <span class="hljs-number">1</span>)
+}
+<span class="hljs-keyword">func</span> main() {
+    <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; <span class="hljs-keyword">int</span>(repetitions); i++ {
+        <span class="hljs-keyword">go</span> f(i)
+    }
+
+    <span class="hljs-comment">// close channel</span>
+    <span class="hljs-keyword">go</span> <span class="hljs-keyword">func</span>() {
+        <span class="hljs-keyword">for</span> {
+            v := atomic.LoadInt64(&amp;counter)
+            <span class="hljs-keyword">if</span> v == repetitions {
+                fmt.Println(<span class="hljs-string">&quot;Channel will be closed&quot;</span>)
+                <span class="hljs-built_in">close</span>(c)
+                <span class="hljs-keyword">break</span>
+            }
+        }
+    }()
+
+    <span class="hljs-keyword">for</span> value := <span class="hljs-keyword">range</span> c {
+        fmt.Println(value)
+    }
+}
+</code></pre>
+<p>In the code above, the <code>make()</code> function is used to create an unbuffered chanel with a capacity
+of 100. The buffered channel operates as a first-in-first-out blocking queue.</p>
+<p>Characteristics:</p>
+<ul>
+<li>When the channel is empty, the receiver blocks until there is at least one element</li>
+<li>The sender always succeeds as long as the channel is not at capacity</li>
+<li>When the channel is at capacity, the sender blocks until at least one element is received</li>
+</ul>
+<h2 id="close-channel">close channel</h2>
+<p><code>close</code> in the previous example is used to close the channel and stop the <code>for range</code> loop.
+Characteristics:</p>
+<ul>
+<li>Subsequent send operations will cause a program to panic</li>
+<li>Receive operations never block (regardless of whether buffered or unbuffered)</li>
+<li>All receive operations return the zero value of the channel&apos;s element type</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> main() {
+    ch := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> <span class="hljs-keyword">int</span>)
+    <span class="hljs-keyword">go</span> <span class="hljs-keyword">func</span>() {
+        ch &lt;- <span class="hljs-number">4</span>
+        <span class="hljs-built_in">close</span>(ch)
+    }()
+    fmt.Println(&lt;-ch)
+    fmt.Println(&lt;-ch) <span class="hljs-comment">// closed, returns zero value for element</span>
+}
+</code></pre>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> main() {
+    ch := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> <span class="hljs-keyword">int</span>, <span class="hljs-number">4</span>)
+    ch &lt;- <span class="hljs-number">2</span>
+    ch &lt;- <span class="hljs-number">4</span>
+    <span class="hljs-built_in">close</span>(ch)
+    <span class="hljs-comment">// ch &lt;- 6 // panic, send on closed channel</span>
+    fmt.Println(&lt;-ch)
+    fmt.Println(&lt;-ch)
+    fmt.Println(&lt;-ch) <span class="hljs-comment">// closed, returns zero value for element</span>
+}
+</code></pre>
+<h2 id="status-of-channel">Status of channel</h2>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> main() {
+    ch := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> <span class="hljs-keyword">int</span>, <span class="hljs-number">4</span>)
+    ch &lt;- <span class="hljs-number">2</span>
+    ch &lt;- <span class="hljs-number">4</span>
+    <span class="hljs-built_in">close</span>(ch)
+    <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++ {
+        <span class="hljs-keyword">if</span> val, opened := &lt;-ch; opened {
+            fmt.Println(val)
+        } <span class="hljs-keyword">else</span> {
+            fmt.Println(<span class="hljs-string">&quot;Channel closed!&quot;</span>)
+        }
+    }
+}
+</code></pre>
+<p>The code <code>if val, opened := &lt;-ch; opened {}</code> return a boolean <code>false</code> if channel is close.
+Then the boolean is used to handle the zero value of the channel.</p>
+<h2 id="select">select</h2>
+<p>Sometimes it is necessary for concurrent programs to handle send and receive operations for multiple channels at the same time.</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;time&quot;</span>
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;sync&quot;</span>
+)
+
+<span class="hljs-keyword">var</span> wg sync.WaitGroup
+
+<span class="hljs-keyword">func</span> main() {
+    wg.Add(<span class="hljs-number">3</span>)
+
+    c1 := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> <span class="hljs-keyword">string</span>)
+    c2 := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> <span class="hljs-keyword">string</span>)
+    <span class="hljs-keyword">go</span> <span class="hljs-keyword">func</span>() {
+        <span class="hljs-keyword">for</span> {
+            c1 &lt;- <span class="hljs-string">&quot;from 1&quot;</span>
+            time.Sleep(time.Second * <span class="hljs-number">2</span>)
+        }
+        wg.Done()
+    }()
+    <span class="hljs-keyword">go</span> <span class="hljs-keyword">func</span>() {
+        <span class="hljs-keyword">for</span> {
+            c2 &lt;- <span class="hljs-string">&quot;from 2&quot;</span>
+            time.Sleep(time.Second * <span class="hljs-number">3</span>)
+        }
+        wg.Done()
+    }()
+    <span class="hljs-keyword">go</span> <span class="hljs-keyword">func</span>() {
+        <span class="hljs-keyword">for</span> {
+            <span class="hljs-keyword">select</span> {
+            <span class="hljs-keyword">case</span> msg1 := &lt;-c1:
+                fmt.Println(msg1)
+            <span class="hljs-keyword">case</span> msg2 := &lt;-c2:
+                fmt.Println(msg2)
+            }
+        }
+        wg.Done()
+    }()
+    wg.Wait()
+}
+</code></pre>
+<h2 id="race-conditions">Race conditions</h2>
+<p><code>go run -race program.go</code></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="interfaces.html" class="navigation navigation-prev " aria-label="Previous page: Interfaces">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="packages.html" class="navigation navigation-next " aria-label="Next page: Packages">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"language":"en","title":"Concurrency","description":"Lern about concurrency and channels in Go.","level":"3.11","depth":1,"next":{"title":"Packages","level":"3.12","depth":1,"path":"syntax/packages.md","ref":"syntax/packages.md","articles":[]},"previous":{"title":"Interfaces","level":"3.10","depth":1,"path":"syntax/interfaces.md","ref":"syntax/interfaces.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"syntax/concurrency.md","mtime":"2018-02-14T19:58:22.417Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-20T23:16:46.767Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

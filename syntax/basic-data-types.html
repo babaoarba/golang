@@ -1,0 +1,575 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Basic data types · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Learn about Go basic data types like strings, numbers and booleans">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="aggregate-data-types.html" />
+    
+    
+    <link rel="prev" href="data-types.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <span>
+            
+                    
+                    Home
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Basics</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../basics/first-go-program.html">
+            
+                <a href="../basics/first-go-program.html">
+            
+                    
+                    First Go Program
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Syntax</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="structure.html">
+            
+                <a href="structure.html">
+            
+                    
+                    Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="variables.html">
+            
+                <a href="variables.html">
+            
+                    
+                    Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="control-structures.html">
+            
+                <a href="control-structures.html">
+            
+                    
+                    Control Structures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="data-types.html">
+            
+                <a href="data-types.html">
+            
+                    
+                    Data types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.5" data-path="basic-data-types.html">
+            
+                <a href="basic-data-types.html">
+            
+                    
+                    Basic data types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="aggregate-data-types.html">
+            
+                <a href="aggregate-data-types.html">
+            
+                    
+                    Aggregate data types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="reference-data-types.html">
+            
+                <a href="reference-data-types.html">
+            
+                    
+                    Reference data types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="functions.html">
+            
+                <a href="functions.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="OOP.html">
+            
+                <a href="OOP.html">
+            
+                    
+                    OOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="interfaces.html">
+            
+                <a href="interfaces.html">
+            
+                    
+                    Interfaces
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.11" data-path="concurrency.html">
+            
+                <a href="concurrency.html">
+            
+                    
+                    Concurrency
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.12" data-path="packages.html">
+            
+                <a href="packages.html">
+            
+                    
+                    Packages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.13" data-path="error-handling.html">
+            
+                <a href="error-handling.html">
+            
+                    
+                    Error Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.14" data-path="logging.html">
+            
+                <a href="logging.html">
+            
+                    
+                    Logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.15" data-path="testing.html">
+            
+                <a href="testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.16" data-path="benchmark.html">
+            
+                <a href="benchmark.html">
+            
+                    
+                    Benchmark
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Basic data types</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="basic-data-types">Basic Data Types</h1>
+<h2 id="integers">Integers</h2>
+<p>There are five sizes if integers:</p>
+<ul>
+<li><code>int8</code>, <code>int16</code>, <code>int32</code>, <code>int64</code>, <code>int</code> with corresponding unsigned versions <code>uint8</code>, <code>uint16</code>, <code>uint32</code>, <code>uint64</code>, <code>uint</code>.
+The <code>int</code> data type depend on the architecture of the computer and is assigned automatically by the compiler.</li>
+</ul>
+<p>There are also two synonyms:</p>
+<ul>
+<li><code>rune</code> that is synonym of <code>int32</code> and indicates that the value is a Unicode code point.</li>
+<li><code>byte</code> that is synonym of <code>int8</code> and indicates that the value is a pice of raw code.</li>
+</ul>
+<p>Finally there is <code>uintptr</code> that can hold the bits of any pointer value.</p>
+<pre><code class="lang-go"><span class="hljs-keyword">var</span> money <span class="hljs-keyword">int</span> = <span class="hljs-number">0</span>
+</code></pre>
+<h2 id="floating-point-numbers">Floating Point Numbers</h2>
+<p>Go provides two sizes of floating point numbers: <code>float32</code> and <code>floaat64</code>.
+A <code>float32</code> provides a six decimal digits precision. The <code>float64</code> provides almost 15 digits.</p>
+<pre><code class="lang-go"><span class="hljs-keyword">var</span> f float = <span class="hljs-number">1.2</span>
+</code></pre>
+<h2 id="booleans">Booleans</h2>
+<p>Booleans has only two possible values: <code>true</code> and <code>false</code>.
+Boolean values can be combined with the &amp;&amp; (AND) and || (OR) operators, which have short-circuit behavior : if the answer is already determined by the value of the left operand, the right operand is not evaluated, making it safe to write expressions like this:</p>
+<pre><code class="lang-go">s != <span class="hljs-string">&quot;&quot;</span> &amp;&amp; s[<span class="hljs-number">0</span>] == <span class="hljs-string">&apos;x&apos;</span>
+</code></pre>
+<p>where <code>s[0]</code> would panic if applied to an empty string.</p>
+<h2 id="strings">Strings</h2>
+<p>A string is an immutable sequence of bytes.
+Text strings are conventionally interpreted as UTF-8-encoded sequences of Unicode code points (runes).</p>
+<pre><code class="lang-go">s := <span class="hljs-string">&quot;hello, world&quot;</span>     <span class="hljs-comment">// &quot;hello world&quot; represent a string literal</span>
+fmt.Println(<span class="hljs-built_in">len</span>(s))     <span class="hljs-comment">// &quot;12&quot;</span>
+fmt.Println(s[<span class="hljs-number">0</span>], s[<span class="hljs-number">7</span>]) <span class="hljs-comment">// &quot;104 119&quot;  (&apos;h&apos; and &apos;w&apos;)</span>
+</code></pre>
+<p>Since strings are immutable and constructors like this are invalid:</p>
+<pre><code class="lang-go">s[<span class="hljs-number">0</span>] = <span class="hljs-string">&apos;L&apos;</span> <span class="hljs-comment">// compile error: cannot assign to s[0]</span>
+</code></pre>
+<p>Immutability means that it is safe for two copies of string to share the same underlying memory, making it cheap to copy strings of any length.
+Similarly, a string <code>s</code> and a substring <code>s[7:]</code> may safely share the same data; no new memory is allocated in either case.</p>
+<h3 id="string-literals">String literals</h3>
+<p><code>&quot;Hello World&quot;</code> represent a string literal.
+Inside double quoted string literal can be inserted ASCII control lines:</p>
+<pre><code class="lang-go">\a alert or bell
+\b backspace
+\f form feed
+\n <span class="hljs-built_in">new</span> line
+\r carrige <span class="hljs-keyword">return</span>
+\t tab
+\v vertical tab
+\<span class="hljs-string">&apos; single quote (only inside rune literal &apos;</span>\<span class="hljs-string">&apos;&apos;)
+\&quot; double quote (only within &quot; &quot; literals)
+</span></code></pre>
+<p>Arbitrary bytes can also be included in literal strings using hexadecimal or octal escapes.</p>
+<h3 id="raw-literals">Raw literals</h3>
+<p>A raw string literal is written <code>...</code>, using backquotes instead of double quotes. Within a raw string literal, no escape sequences are processed; the contents are taken literally, including backslashes and newlines, so a raw string literal may spread over several lines in the program source. </p>
+<h3 id="utf-8">UTF-8</h3>
+<p>Go source files are always encoded in UTF-8, and UTF-8 is the preferred encoding for text strings manipulated by Go programs.
+There are two form of unicode: <code>\uhhhh</code> for a 16-bit value and <code>\Uhhhhhhhh</code> for a 32-bit value, where each h is a hexadecimal digit</p>
+<h3 id="usefull-packages">Usefull packages</h3>
+<p>Four standard packages are particularly important for manipulating strings: bytes, strings, strconv, and unicode. </p>
+<p>The strings package provides many functions for searching, replacing, comparing, trimming, splitting, and joining strings.</p>
+<p>The bytes package has similar functions for manipulating slices of bytes, of type []byte, which share some properties with strings. Because strings are immutable, building up strings incrementally can involve a lot of allocation and copying . In such cases, it&#x2019;s more efficient to use the bytes.</p>
+<pre><code class="lang-go"><span class="hljs-keyword">func</span> intsToString(values []<span class="hljs-keyword">int</span>) <span class="hljs-keyword">string</span> {
+    <span class="hljs-keyword">var</span> buf bytes.Buffer
+    buf.WriteByte(<span class="hljs-string">&apos;[&apos;</span>)
+    <span class="hljs-keyword">for</span> i, v := <span class="hljs-keyword">range</span> values {
+        <span class="hljs-keyword">if</span> i &gt; <span class="hljs-number">0</span> {
+            buf.WriteString(<span class="hljs-string">&quot;, &quot;</span>)
+        }
+        fmt.Fprintf(&amp;buf, <span class="hljs-string">&quot;%d&quot;</span>, v)
+    }
+    buf.WriteByte(<span class="hljs-string">&apos;]&apos;</span>)
+    <span class="hljs-keyword">return</span> buf.String()
+}
+
+<span class="hljs-keyword">func</span> main() {
+    fmt.Println(intsToString([]<span class="hljs-keyword">int</span>{<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>})) <span class="hljs-comment">// &quot;[1, 2, 3]&quot;</span>
+}
+</code></pre>
+<p>The strconv package provides functions for converting boolean, integer, and floating-point values to and from their string representations, and functions for quoting and unquoting strings.</p>
+<p>The unicode package provides functions like IsDigit, IsLetter, IsUpper, and IsLower for classifying runes. Each function takes a single rune argument and returns a boolean. Conversion functions like ToUpper and ToLower convert a rune into the given case if it is a letter. All these functions use the Unicode standard categories for letters, digits, and so on. The strings package has similar functions, also called ToUpper and ToLower, that return a new string with the specified transformation applied to each character of the original string.  </p>
+<h1 id="constants">Constants</h1>
+<p>Constants are expressions whose values are known at compile time. Constants are made by basic types: booleans, strings or numbers.</p>
+<pre><code class="lang-go"><span class="hljs-keyword">const</span> pi = <span class="hljs-number">3.14159</span> <span class="hljs-comment">// approximately; math.Pi is a better approximation</span>
+</code></pre>
+<p>To create enumerators, in Go, can be used the <code>iota</code> keyword.</p>
+<pre><code class="lang-go"><span class="hljs-keyword">type</span> Weekday <span class="hljs-keyword">int</span>
+
+<span class="hljs-keyword">const</span> (
+    Sunday Weekday = <span class="hljs-literal">iota</span>
+    Monday
+    Tuesday
+    Wednesday
+    Thursday
+    Friday
+    Saturday
+)
+</code></pre>
+<p>This declares Sunday to be 0, Monday to be 1, and so on.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="data-types.html" class="navigation navigation-prev " aria-label="Previous page: Data types">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="aggregate-data-types.html" class="navigation navigation-next " aria-label="Next page: Aggregate data types">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"language":"en","title":"Basic data types","description":"Learn about Go basic data types like strings, numbers and booleans","level":"3.5","depth":1,"next":{"title":"Aggregate data types","level":"3.6","depth":1,"path":"syntax/aggregate-data-types.md","ref":"syntax/aggregate-data-types.md","articles":[]},"previous":{"title":"Data types","level":"3.4","depth":1,"path":"syntax/data-types.md","ref":"syntax/data-types.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"syntax/basic-data-types.md","mtime":"2018-02-10T23:48:39.459Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-20T23:16:46.767Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

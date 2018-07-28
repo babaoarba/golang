@@ -1,0 +1,594 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Reference data types · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Learn about Go reference data types like slices, maps, functions, channels and pointers.">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="functions.html" />
+    
+    
+    <link rel="prev" href="aggregate-data-types.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <span>
+            
+                    
+                    Home
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Basics</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../basics/first-go-program.html">
+            
+                <a href="../basics/first-go-program.html">
+            
+                    
+                    First Go Program
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Syntax</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="structure.html">
+            
+                <a href="structure.html">
+            
+                    
+                    Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="variables.html">
+            
+                <a href="variables.html">
+            
+                    
+                    Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="control-structures.html">
+            
+                <a href="control-structures.html">
+            
+                    
+                    Control Structures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="data-types.html">
+            
+                <a href="data-types.html">
+            
+                    
+                    Data types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="basic-data-types.html">
+            
+                <a href="basic-data-types.html">
+            
+                    
+                    Basic data types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="aggregate-data-types.html">
+            
+                <a href="aggregate-data-types.html">
+            
+                    
+                    Aggregate data types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.7" data-path="reference-data-types.html">
+            
+                <a href="reference-data-types.html">
+            
+                    
+                    Reference data types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="functions.html">
+            
+                <a href="functions.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="OOP.html">
+            
+                <a href="OOP.html">
+            
+                    
+                    OOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="interfaces.html">
+            
+                <a href="interfaces.html">
+            
+                    
+                    Interfaces
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.11" data-path="concurrency.html">
+            
+                <a href="concurrency.html">
+            
+                    
+                    Concurrency
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.12" data-path="packages.html">
+            
+                <a href="packages.html">
+            
+                    
+                    Packages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.13" data-path="error-handling.html">
+            
+                <a href="error-handling.html">
+            
+                    
+                    Error Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.14" data-path="logging.html">
+            
+                <a href="logging.html">
+            
+                    
+                    Logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.15" data-path="testing.html">
+            
+                <a href="testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.16" data-path="benchmark.html">
+            
+                <a href="benchmark.html">
+            
+                    
+                    Benchmark
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Reference data types</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="reference-data-types">Reference Data Types</h1>
+<h2 id="slices">Slices</h2>
+<p>A slice is a segment of an array. Like arrays slices are indexable and have a length that is allowed to change.</p>
+<pre><code class="lang-go"><span class="hljs-keyword">var</span> x []<span class="hljs-keyword">float64</span>             <span class="hljs-comment">// x has length zero and we can not insert value into x</span>
+x := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">float64</span>, <span class="hljs-number">5</span>)     <span class="hljs-comment">// x is associated with an underlying array of len 5</span>
+x := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">float64</span>, <span class="hljs-number">5</span>, <span class="hljs-number">10</span>) <span class="hljs-comment">// x has a length of 5 but hte underlying array has capacity 10</span>
+</code></pre>
+<h3 id="append">append</h3>
+<pre><code class="lang-go">slice1 := []<span class="hljs-keyword">int</span>{<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>}
+slice2 := <span class="hljs-built_in">append</span>(slice1, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>)
+</code></pre>
+<p>The result of <code>slice2</code> is <code>[1 2 3 4 5]</code></p>
+<h3 id="copy">copy</h3>
+<pre><code class="lang-go">slice1 := []<span class="hljs-keyword">int</span>{<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>} 
+slice2 := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">int</span>, <span class="hljs-number">2</span>)
+<span class="hljs-built_in">copy</span>(slice2, slice1)
+</code></pre>
+<p>The copy function will copy <code>slice1</code> into <code>slice2</code>. Because <code>slice2</code> has a length of 2, only 1 and 2 will be copy.</p>
+<h2 id="maps">Maps</h2>
+<p>Maps is an unordered collection of key value-pairs.</p>
+<pre><code class="lang-go"><span class="hljs-keyword">var</span> x <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">int</span>
+</code></pre>
+<p><code>x</code> is a map of string keys and integers values. but if we try to initialize the map with values we get an error:</p>
+<pre><code class="lang-go">x[<span class="hljs-string">&quot;key&quot;</span>] = <span class="hljs-number">10</span>
+fmt.Println(x) <span class="hljs-comment">// panic: runtime error: assignment to entry in nil map</span>
+</code></pre>
+<p>The error is because the map points to a nil value. The map has no underlying structure.
+To fix the error we use the <code>make</code> function.</p>
+<pre><code class="lang-go">x := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">int</span>) 
+x[<span class="hljs-string">&quot;key&quot;</span>] = <span class="hljs-number">10</span>
+fmt.Println(x[<span class="hljs-string">&quot;key&quot;</span>]) <span class="hljs-comment">// 10</span>
+</code></pre>
+<h3 id="delete">delete</h3>
+<pre><code class="lang-go"><span class="hljs-built_in">delete</span>(x, <span class="hljs-string">&quot;key&quot;</span>) <span class="hljs-comment">// this will delete the key field from map</span>
+</code></pre>
+<h3 id="examples">Examples</h3>
+<pre><code class="lang-go">elements := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">string</span>)
+    elements[<span class="hljs-string">&quot;H&quot;</span>] = <span class="hljs-string">&quot;Hydrogen&quot;</span>
+    elements[<span class="hljs-string">&quot;He&quot;</span>] = <span class="hljs-string">&quot;Helium&quot;</span>
+    elements[<span class="hljs-string">&quot;Li&quot;</span>] = <span class="hljs-string">&quot;Lithium&quot;</span>
+    elements[<span class="hljs-string">&quot;Be&quot;</span>] = <span class="hljs-string">&quot;Beryllium&quot;</span>
+    elements[<span class="hljs-string">&quot;B&quot;</span>] = <span class="hljs-string">&quot;Boron&quot;</span>
+    elements[<span class="hljs-string">&quot;C&quot;</span>] = <span class="hljs-string">&quot;Carbon&quot;</span>
+    elements[<span class="hljs-string">&quot;N&quot;</span>] = <span class="hljs-string">&quot;Nitrogen&quot;</span>
+    elements[<span class="hljs-string">&quot;O&quot;</span>] = <span class="hljs-string">&quot;Oxygen&quot;</span>
+    elements[<span class="hljs-string">&quot;F&quot;</span>] = <span class="hljs-string">&quot;Fluorine&quot;</span>
+    elements[<span class="hljs-string">&quot;Ne&quot;</span>] = <span class="hljs-string">&quot;Neon&quot;</span>
+    fmt.Println(elements[<span class="hljs-string">&quot;Li&quot;</span>])
+}
+
+<span class="hljs-comment">// shorter syntax</span>
+elements := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">string</span>{<span class="hljs-string">&quot;H&quot;</span>: <span class="hljs-string">&quot;Hydrogen&quot;</span>,
+    <span class="hljs-string">&quot;He&quot;</span>: <span class="hljs-string">&quot;Helium&quot;</span>,
+    <span class="hljs-string">&quot;Li&quot;</span>: <span class="hljs-string">&quot;Lithium&quot;</span>,
+    <span class="hljs-string">&quot;Be&quot;</span>: <span class="hljs-string">&quot;Beryllium&quot;</span>,
+    <span class="hljs-string">&quot;B&quot;</span>: <span class="hljs-string">&quot;Boron&quot;</span>,
+    <span class="hljs-string">&quot;C&quot;</span>: <span class="hljs-string">&quot;Carbon&quot;</span>,
+    <span class="hljs-string">&quot;N&quot;</span>: <span class="hljs-string">&quot;Nitrogen&quot;</span>,
+    <span class="hljs-string">&quot;O&quot;</span>: <span class="hljs-string">&quot;Oxygen&quot;</span>,
+    <span class="hljs-string">&quot;F&quot;</span>: <span class="hljs-string">&quot;Fluorine&quot;</span>,
+    <span class="hljs-string">&quot;Ne&quot;</span>: <span class="hljs-string">&quot;Neon&quot;</span>,
+}
+</code></pre>
+<pre><code class="lang-go">elements := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">string</span>{
+        <span class="hljs-string">&quot;H&quot;</span>: <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">string</span>{
+            <span class="hljs-string">&quot;name&quot;</span>:  <span class="hljs-string">&quot;Hydrogen&quot;</span>,
+            <span class="hljs-string">&quot;state&quot;</span>: <span class="hljs-string">&quot;gas&quot;</span>,
+        },
+        <span class="hljs-string">&quot;He&quot;</span>: <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">string</span>{
+            <span class="hljs-string">&quot;name&quot;</span>:  <span class="hljs-string">&quot;Helium&quot;</span>,
+            <span class="hljs-string">&quot;state&quot;</span>: <span class="hljs-string">&quot;gas&quot;</span>,
+        },
+        <span class="hljs-string">&quot;Li&quot;</span>: <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">string</span>{
+            <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Lithium&quot;</span>,
+            <span class="hljs-string">&quot;state&quot;</span>: <span class="hljs-string">&quot;solid&quot;</span>,
+        },
+        <span class="hljs-string">&quot;Be&quot;</span>: <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">string</span>{
+            <span class="hljs-string">&quot;name&quot;</span>:  <span class="hljs-string">&quot;Beryllium&quot;</span>,
+            <span class="hljs-string">&quot;state&quot;</span>: <span class="hljs-string">&quot;solid&quot;</span>,
+        },
+        <span class="hljs-string">&quot;B&quot;</span>: <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">string</span>{
+            <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Boron&quot;</span>,
+            <span class="hljs-string">&quot;state&quot;</span>: <span class="hljs-string">&quot;solid&quot;</span>,
+        },
+        <span class="hljs-string">&quot;C&quot;</span>: <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">string</span>{
+            <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Carbon&quot;</span>,
+            <span class="hljs-string">&quot;state&quot;</span>: <span class="hljs-string">&quot;solid&quot;</span>,
+        },
+        <span class="hljs-string">&quot;N&quot;</span>: <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">string</span>{
+            <span class="hljs-string">&quot;name&quot;</span>:  <span class="hljs-string">&quot;Nitrogen&quot;</span>,
+            <span class="hljs-string">&quot;state&quot;</span>: <span class="hljs-string">&quot;gas&quot;</span>,
+        },
+        <span class="hljs-string">&quot;O&quot;</span>: <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">string</span>{
+            <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Oxygen&quot;</span>,
+            <span class="hljs-string">&quot;state&quot;</span>: <span class="hljs-string">&quot;gas&quot;</span>,
+        },
+        <span class="hljs-string">&quot;F&quot;</span>: <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">string</span>{
+            <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Fluorine&quot;</span>,
+            <span class="hljs-string">&quot;state&quot;</span>: <span class="hljs-string">&quot;gas&quot;</span>,
+        },
+        <span class="hljs-string">&quot;Ne&quot;</span>: <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">string</span>{
+            <span class="hljs-string">&quot;name&quot;</span>:  <span class="hljs-string">&quot;Neon&quot;</span>,
+            <span class="hljs-string">&quot;state&quot;</span>: <span class="hljs-string">&quot;gas&quot;</span>,
+        },
+    }
+    <span class="hljs-keyword">if</span> el, ok := elements[<span class="hljs-string">&quot;Li&quot;</span>]; ok {
+        fmt.Println(el[<span class="hljs-string">&quot;name&quot;</span>], el[<span class="hljs-string">&quot;state&quot;</span>])
+    }
+</code></pre>
+<p>In the last example the map stores as value another map.
+The <code>if</code> statment is used to check if element <code>Li</code> is part of map.</p>
+<h1 id="functions">Functions</h1>
+<p>See <a href="functions.html">function</a> section.</p>
+<h1 id="channels">Channels</h1>
+<p>See <a href="concurrency.html">channels</a> section.</p>
+<h1 id="pointers">Pointers</h1>
+<p>See <a href="variables.html">variables</a> section.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="aggregate-data-types.html" class="navigation navigation-prev " aria-label="Previous page: Aggregate data types">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="functions.html" class="navigation navigation-next " aria-label="Next page: Functions">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"language":"en","title":"Reference data types","description":"Learn about Go reference data types like slices, maps, functions, channels and pointers.","level":"3.7","depth":1,"next":{"title":"Functions","level":"3.8","depth":1,"path":"syntax/functions.md","ref":"syntax/functions.md","articles":[]},"previous":{"title":"Aggregate data types","level":"3.6","depth":1,"path":"syntax/aggregate-data-types.md","ref":"syntax/aggregate-data-types.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"syntax/reference-data-types.md","mtime":"2018-02-14T20:37:37.663Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-20T23:16:46.767Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
